@@ -42,11 +42,9 @@ public class Car {
 	 *            The amount the car will accelerate
 	 */
 	public void accelerate(int amount) {
-		int limit = maxSpeed - speed;
-		if (amount >= limit) {
-			speed = limit;
-		} else {
-			speed += amount;
+		speed += amount;
+		if (speed > maxSpeed) {
+			speed = maxSpeed;
 		}
 	}
 	
